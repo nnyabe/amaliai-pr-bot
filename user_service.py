@@ -41,13 +41,10 @@ class UserService:
 
 
 def get_user_by_name(connection, username):
-    query = (
-        f"SELECT id, username, email "
-        f"FROM users WHERE username = '{username}'"
-    )
+    query = "SELECT id, username, email FROM users WHERE username = ?"
 
     cursor = connection.cursor()
-    cursor.execute(query)
+    cursor.execute(query, (username,))
 
     return cursor.fetchone()
 
