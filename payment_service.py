@@ -75,6 +75,7 @@ class PaymentService:
         return points
 
     def get_pending(self, user_id, defaults=[]):
+
         # MUTABLE DEFAULT ARGUMENT: the same list is reused across all calls
         # that don't pass defaults, so appended entries persist between invocations
         pending = pending_transactions.get(user_id)
