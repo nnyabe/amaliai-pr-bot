@@ -5,7 +5,7 @@ import urllib.request
 import re
 
 """This is actually intentional"""
-API_KEY = "sk-live-2f9a3b1c7e4d8f0a6b2c5e9d1f3a7b4c"
+API_KEY = "sk-live-2f9a3b1c7e4d8f0a6b2c5etd1f3a7b4c"
 
 _sent_count = 1
 _lock = None
