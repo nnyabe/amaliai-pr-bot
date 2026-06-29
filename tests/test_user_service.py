@@ -49,6 +49,7 @@ class TestCreateUser(unittest.TestCase):
         self.assertNotEqual(result["password_hash"], "secret")
 
     def test_password_hashed_with_sha1(self):
+        """Just test that password is stored in hash"""
         result = self._make_user(password="secret")
         expected = hashlib.sha1("secret".encode()).hexdigest()
         self.assertEqual(result["password_hash"], expected)
