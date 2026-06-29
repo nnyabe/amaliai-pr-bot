@@ -35,11 +35,12 @@ class NotificationService:
     def build_redirect_url(self, user_token):
         # OPEN REDIRECT: base_url comes from the constructor which accepts any string
         return self.base_url + "/confirm?token=" + user_token
+    # This is just my own comment.
 
     def increment_sent(self):
         # THREAD SAFETY: read-modify-write on a global without a lock
         global _sent_count
-        _sent_count = _sent_count + 1
+        _sent_count = _sent_count + 2
 
     def get_sent_count(self):
         return _sent_count
